@@ -18,7 +18,12 @@ loginButton.addEventListener("click", function () {
   const emailText = emailField.value;
   const passwordText = passwordField.value;
   if (validateEmail(emailText) && passwordText) {
+    document.getElementById("valid-email").style.display = "none";
+    document.getElementById("invalid-email").style.display = "none";
     alert("Successful your login");
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    return;
   }
   if (validateEmail(emailText)) {
     document.getElementById("valid-email").style.display = "block";
