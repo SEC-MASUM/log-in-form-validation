@@ -21,20 +21,34 @@
         <h2 class="text-2xl font-medium text-purple-700 mb-5 capitalize">
           Log In
         </h2>
-        <input
-          id="email"
-          class="w-4/5 shadow-gray-200 shadow-md rounded-full px-4 py-2 mb-5"
-          type="email"
-          placeholder="Please enter your email"
-          required
-        />
-        <input
-          id="password"
-          class="w-4/5 shadow-gray-200 shadow-md rounded-full px-4 py-2 mb-5"
-          type="password"
-          placeholder="Please enter your password"
-          required
-        />
+        <div class="mb-4">
+          <input
+            id="email"
+            onkeyup="validate()"
+            class="w-4/5 shadow-gray-200 shadow-md rounded-full px-4 py-2 mb-2"
+            type="email"
+            placeholder="Please enter your email"
+            required
+          />
+          <div class="w-4/5 text-center mx-auto">
+            <p id="invalid-email" class="text-left block px-4 text-red-500">Please use a valid email address.</pi>
+            <p id="valid-email" class="text-left block px-4 text-green-500">Email address is valid.</pi>
+          </div>
+        </div>
+        <div class="mb-4">
+          <input
+            id="password"
+            class="w-4/5 shadow-gray-200 shadow-md rounded-full px-4 py-2 mb-2"
+            type="password"
+            placeholder="Please enter your password"
+            required
+          />
+          <div class="w-4/5 text-center mx-auto">
+            <p id="invalid-password" class="text-left block px-4"></pi>
+          </div>
+          
+        </div>
+
         <button
           id="login-button"
           class="font-normal text-white bg-purple-700 uppercase block shadow-gray-400 shadow-lg rounded-full px-6 py-1.5 mx-auto"
